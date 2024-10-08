@@ -25,6 +25,14 @@ Coverage needs the `lcov` tool.
 
 Documentation needs the `doxygen` and `graphviz` tools.
 
+## Building (with TI C6000 Code Generation Tools for KFLOP)
+
+From within the `protobuf-c-text` directory:
+- Run `cl6x -I<path to KMotion5.3.3>/DSP_KFLOP/ -I<path to ti-c6000-toolchain>/c6000_7.4.24/include -I<path to protobuf-c> --gcc generate.c`
+- This will produce a `generate.obj` file
+- Run `ar6x rs libprotobuf-c-text.lib generate.obj`
+- This will produce the `libprotobuf-c-text.lib` file
+
 ## Testing
 
 The `t/c-*` programs use the `BROKEN_MALLOC` and `BROKEN_MALLOC_SEGV`
