@@ -30,9 +30,9 @@ Documentation needs the `doxygen` and `graphviz` tools.
 From within the `protobuf-c-text` directory:
 - Run `re2c -s -o parse.c parse.re`
 - This will produce the `parse.c` file
-- Run `cl6x -I<path to KMotion5.3.3>/DSP_KFLOP/ -I<path to ti-c6000-toolchain>/c6000_7.4.24/include -I<path to protobuf-c> --gcc generate.c`
+- Run `cl6x -I<path to KMotion5.3.3>/DSP_KFLOP/ -I<path to ti-c6000-toolchain>/c6000_7.4.24/include -I<path to protobuf-c> -I../build-aux/ --gcc generate.c`
 - This will produce a `generate.obj` file
-- Run `cl6x -I<path to KMotion5.3.3>/DSP_KFLOP/ -I<path to ti-c6000-toolchain>/c6000_7.4.24/include -I<path to protobuf-c> --gcc parse.c`
+- Run `cl6x -I<path to KMotion5.3.3>/DSP_KFLOP/ -I<path to ti-c6000-toolchain>/c6000_7.4.24/include -I<path to protobuf-c> -I../build-aux/ --gcc parse.c`
 - This will produce a `parse.obj` file
 - Run `ar6x rs libprotobuf-c-text.lib generate.obj parse.obj`
 - This will produce the `libprotobuf-c-text.lib` file
