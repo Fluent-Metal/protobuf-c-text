@@ -5,7 +5,6 @@
 # Autoconf products.
 Makefile
 /autom4te.cache
-build-aux/config.h
 build-aux/stamp-h1
 config.log
 config.status
