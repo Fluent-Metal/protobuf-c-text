@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
 \endverbatim
  */
 
-#include <stdio.h>  /* for the FILE * data type. */
+//#include <stdio.h>  /* for the FILE * data type. */
 #include <protobuf-c/protobuf-c.h>
 
 /** \defgroup api Public API for text format protobufs
