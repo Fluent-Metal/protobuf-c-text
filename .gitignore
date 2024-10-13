@@ -3,7 +3,6 @@
 .*.swp
 
 # Autoconf products.
-Makefile
 /autom4te.cache
 build-aux/stamp-h1
 config.log
@@ -20,6 +19,7 @@ config.cache
 *.pb.cc
 *.lo
 *.o
+*.obj
 *.la
 protobuf-c-text/libprotobuf-c-text.pc
 
