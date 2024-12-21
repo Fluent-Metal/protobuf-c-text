@@ -21,6 +21,7 @@ config.cache
 *.o
 *.obj
 *.la
+*.lib
 protobuf-c-text/libprotobuf-c-text.pc
 
 # Test generated cruft.
