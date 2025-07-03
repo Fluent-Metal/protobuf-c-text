@@ -10,6 +10,8 @@ PROTOBUF_C_INC := $(PROTOBUF_C_DIR)
 SRC_DIR := ./protobuf-c-text
 INC_DIR := ./build-aux
 BUILD_DIR := ./build
+ASM_DIR := $(BUILD_DIR)/asm
+LST_DIR := $(BUILD_DIR)/lst
 LIB_DIR := ./lib
 
 INCLUDES += $(TI_INC_DIR) $(INC_DIR) $(PROTOBUF_C_INC)
@@ -39,7 +41,9 @@ $(SRC_DIR)/parse.c: $(SRC_DIR)/parse.re
 $(BUILD_DIR)/%.obj: $(SRC_DIR)/%.c
 	@echo "Building $@ from $<..."
 	@mkdir -p "$(dir $@)"
-	@$(CC) "$<" $(CFLAGS) -fr"$(dir $@)"
+	@mkdir -p "$(ASM_DIR)"
+	@mkdir -p "$(LST_DIR)"
+	@$(CC) -k -q -al -as --mem_model:data=far "$<" $(CFLAGS) -fr"$(dir $@)" -fs"$(ASM_DIR)" -ff"$(LST_DIR)" -fb"$(LST_DIR)"
 
 $(PROTOBUF_TEXT_LIB): $(OBJECTS)
 	@echo "Building $@ from $<..."
