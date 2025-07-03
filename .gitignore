@@ -56,3 +56,6 @@ protobuf-c-text/libprotobuf-c-text.pc
 /coverage.info
 *.gcda
 *.gcno
+
+# Build directory
+build/
