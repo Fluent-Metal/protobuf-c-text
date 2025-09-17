@@ -1,6 +1,10 @@
+KFLOP_MK := ../../../kflop.mk
+KOGNA_MK := ../../../kogna.mk
+CONFIG_MK := ../../../config.mk
+
 include ../Makefile.common
 
-TI_DIR := ../ti-c6000-toolchain/c6000_7.4.24
+TI_DIR := ../ti-c6000-toolchain/c6000_$(TI_CGT_VERSION)
 TI_INC_DIR := $(TI_DIR)/include
 TI_BIN_DIR := $(TI_DIR)/bin
 
