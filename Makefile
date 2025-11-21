@@ -1,6 +1,5 @@
-KFLOP_MK := ../../../kflop.mk
-KOGNA_MK := ../../../kogna.mk
-CONFIG_MK := ../../../config.mk
+BUILD_MK := ../../../build/.build.mk
+CONFIG_MK := ../../../build/.config.mk
 
 include ../Makefile.common
 
